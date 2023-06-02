@@ -5,7 +5,7 @@ possible_answers = []
 
 def init_lists():
 
-    #builds list variables from txt files of possible words
+    #builds lists from txt files of possible words
 
     allowed_words_file = open('words/wordle-allowed-guesses.txt','r')
     possible_answers_file = open('words/wordle-answers-alphabetical.txt','r')
@@ -22,7 +22,7 @@ remaining_answers = possible_answers
 
 def is_valid_guess(guess):
 
-    #returns true if the proposed word is a possible guess
+    #returns true if the inputted word is a legal guess
 
     is_valid = False
     for word in total_list:
@@ -31,7 +31,7 @@ def is_valid_guess(guess):
 
 def is_valid_results(results):
 
-    #checks if the proposed results are valid
+    #checks if the inputted results are in the right format
 
     is_valid = 0
     for char in str(results):
@@ -41,7 +41,7 @@ def is_valid_results(results):
 
 def check_if_possible_answer(word,guess,results):
 
-    #checks if a certain word aligns with combination of guess and results
+    #checks if a certain word is a possible answer for a certain combination of a guess and results
 
     possible = True
     index = 0
@@ -66,7 +66,7 @@ def check_if_possible_answer(word,guess,results):
 
 def get_results(word,guess):
 
-    #returns the results for a combination of two words
+    #returns the results for a guess against a possible answer
 
     results = ''
     index = 0
@@ -85,7 +85,7 @@ def get_results(word,guess):
         
 def count_eligible_answers(guess,results,answers_left):
 
-    #counts the total number of eligible answers for the proposed guess and results
+    #counts the total number of possible answers for the proposed guess and results
 
     total = 0
     for word in answers_left:
