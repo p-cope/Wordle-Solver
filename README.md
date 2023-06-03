@@ -1,8 +1,8 @@
 # Wordle-Solver
 
-This python project suggests the best guesses for wordle, using an 'entropy' theory.
+This python project suggests the best guesses for wordle, using 'entropy' theory.
 
-It usually solves wordle in around 3-4 guesses
+It usually solves wordle in around 4 guesses
 
 An initial guess is recommended, and then another recommended each round based on your guess and the results
 
